@@ -1,0 +1,261 @@
+// JetMET HLT triggers accrording to PTDR
+
+// Jet reco module for HLT - Iterative cone jets with R=0.5 cone
+//include "RecoJets/JetProducers/data/CaloJetIcone5.cfi"
+
+// MET reco module for HLT
+//include "RecoMET/METProducers/data/CaloMET.cfi"
+
+
+//JetMET filters to be used in JetMET HLT paths
+
+// Single jet
+        module hlt1jet60 = HLT1CaloJet {
+                InputTag inputTag = midPointCone5CaloJets
+                double MinPt = 60.0
+                double MaxEta= 5.0
+                int32  MinN  = 1
+        }
+
+// Single jet
+        module hlt1jet100 = HLT1CaloJet {
+                InputTag inputTag = midPointCone5CaloJets
+                double MinPt = 100.0
+                double MaxEta= 5.0
+                int32  MinN  = 1
+        }
+
+// Single jet
+        module hlt1jet120 = HLT1CaloJet {
+                InputTag inputTag = midPointCone5CaloJets
+                double MinPt = 120.0
+                double MaxEta= 5.0
+                int32  MinN  = 1
+        }
+
+// Single jet
+        module hlt1jet180 = HLT1CaloJet {
+                InputTag inputTag = midPointCone5CaloJets
+                double MinPt = 180.0
+                double MaxEta= 5.0
+                int32  MinN  = 1
+        }
+
+// Single jet
+        module hlt1jet250 = HLT1CaloJet {
+                InputTag inputTag = midPointCone5CaloJets
+                double MinPt = 250.0
+                double MaxEta= 5.0
+                int32  MinN  = 1
+        }
+
+// Single jet
+        module hlt1jet400 = HLT1CaloJet {
+                InputTag inputTag = midPointCone5CaloJets
+                double MinPt = 400.0
+                double MaxEta= 5.0
+                int32  MinN  = 1
+        }
+
+// Double jet
+        module hlt2jet155 = HLT1CaloJet {
+                InputTag inputTag = midPointCone5CaloJets
+                double MinPt = 155.0
+                double MaxEta= 5.0
+                int32  MinN  = 2
+        }
+
+// Double jet
+        module hlt2jet200 = HLT1CaloJet {
+                InputTag inputTag = midPointCone5CaloJets
+                double MinPt = 200.0
+                double MaxEta= 5.0
+                int32  MinN  = 2
+        }
+
+// Double jet
+        module hlt2jet350 = HLT1CaloJet {
+                InputTag inputTag = midPointCone5CaloJets
+                double MinPt = 350.0
+                double MaxEta= 5.0
+                int32  MinN  = 2
+        }
+
+// Triple jet
+        module hlt3jet85 = HLT1CaloJet {
+                InputTag inputTag = midPointCone5CaloJets
+                double MinPt = 85.0
+                double MaxEta= 5.0
+                int32  MinN  = 3
+        }
+
+// Triple jet
+        module hlt3jet195 = HLT1CaloJet {
+                InputTag inputTag = midPointCone5CaloJets
+                double MinPt = 195.0
+                double MaxEta= 5.0
+                int32  MinN  = 3
+        }
+
+// Quadruple jet
+        module hlt4jet35 = HLT1CaloJet {
+                InputTag inputTag = midPointCone5CaloJets
+                double MinPt = 35.0
+                double MaxEta= 5.0
+                int32  MinN  = 4
+        }
+
+// Quadruple jet
+        module hlt4jet80 = HLT1CaloJet {
+                InputTag inputTag = midPointCone5CaloJets
+                double MinPt = 80.0
+                double MaxEta= 5.0
+                int32  MinN  = 4
+        }
+
+
+// MET
+	module hlt1MET80 = HLT1CaloMET {
+                InputTag inputTag = met
+                double MinPt = 80.0
+                double MaxEta= -1.0 // negative = no cut
+                int32  MinN  = 1
+        }
+
+	module hlt1MET91 = HLT1CaloMET {
+                InputTag inputTag = met
+                double MinPt = 91.0
+                double MaxEta= -1.0 // negative = no cut
+                int32  MinN  = 1
+        }
+
+// MET HT
+	module hlt1HT350 = HLTGlobalSums {
+		InputTag inputTag = met
+		string observable = "sumEt"
+		double   Min = 350.0
+		double   Max = -1.0
+		int32    MinN = 1
+}
+
+// Double object filters (for acoplanarity cuts between 2 objects)
+
+	module hlt2jetAco = HLTDoublet {
+		InputTag inputTag1 = hlt2jet200
+		InputTag inputTag2 = hlt2jet200
+		double MinDphi   = 0.0
+		double MaxDphi   = 2.1
+		double MinDeta   = 0.0
+		double MaxDeta   =-1.0
+		double MinMinv   = 0.0
+		double MaxMinv   =-1.0
+                int32  MinN  = 1
+	}
+
+	module hlt1jet1METAco = HLTDoublet {
+		InputTag inputTag1 = hlt1jet100
+		InputTag inputTag2 = hlt1MET80
+		double MinDphi   = 0.0
+		double MaxDphi   = 2.1
+		double MinDeta   = 0.0
+		double MaxDeta   =-1.0
+		double MinMinv   = 0.0
+		double MaxMinv   =-1.0
+                int32  MinN  = 1
+	}
+
+// HLTPrescaler module in each path (for dynamic prescale changes)
+
+        module  pre1jet        = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        module  pre2jet        = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        module  pre3jet        = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        module  pre4jet        = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        module  pre1MET        = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        module  pre1jet1MET    = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        module  pre2jetAco     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        module  pre1jet1METAco = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        module  pre2jet1MET    = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        module  pre3jet1MET    = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        module  pre4jet1MET    = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        module  pre1MET1HT     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        module  pre1jetPE1     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        module  pre1jetPE3     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        module  pre1jetPE5     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+
+// L1 Seed filters
+
+	module  l1s1jet        = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
+	replace l1s1jet.L1Seeds = {"SingleJet"}
+
+	module  l1s2jet        = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
+	replace l1s2jet.L1Seeds = {"SingleJet","DoubleJet"}
+
+	module  l1s3jet        = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
+	replace l1s3jet.L1Seeds = {"SingleJet","DoubleJet","TripleJet"}
+
+	module  l1s4jet        = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
+	replace l1s4jet.L1Seeds = {"SingleJet","DoubleJet","TripleJet","QuadJet"}
+
+	module  l1s1MET        = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
+	replace l1s1MET.L1Seeds = {"MET"}
+
+	module  l1s1jet1MET    = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
+	replace l1s1jet1MET.L1Seeds = {"MET"}
+
+	module  l1s2jetAco     = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
+	replace l1s2jetAco.L1Seeds = {"SingleJet","DoubleJet"}
+
+	module  l1s1jet1METAco = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
+	replace l1s1jet1METAco.L1Seeds = {"MET"}
+
+	module  l1s2jet1MET    = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
+	replace l1s2jet1MET.L1Seeds = {"MET"}
+
+	module  l1s3jet1MET    = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
+	replace l1s3jet1MET.L1Seeds = {"MET"}
+
+	module  l1s4jet1MET    = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
+	replace l1s4jet1MET.L1Seeds = {"MET"}
+
+	module  l1s1MET1HT     = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
+	replace l1s1MET1HT.L1Seeds = {"HT"}
+
+	module  l1s1jetPE1     = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
+	replace l1s1jetPE1.L1Seeds = {"SingleJet140"}
+
+	module  l1s1jetPE3     = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
+	replace l1s1jetPE3.L1Seeds = {"SingleJet60"}
+
+	module  l1s1jetPE5     = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
+	replace l1s1jetPE5.L1Seeds = {"SingleJet20"}
+
+// HLT trigger paths
+
+
+// jet triggers
+	path HLT1jet = {l1extramctruth & l1s1jet & pre1jet , hlt1jet400}
+	path HLT2jet = {l1extramctruth & l1s2jet & pre2jet , hlt2jet350}
+	path HLT3jet = {l1extramctruth & l1s3jet & pre3jet , hlt3jet195}
+	path HLT4jet = {l1extramctruth & l1s4jet & pre4jet , hlt4jet80 }
+
+
+// met trigger
+	path HLT1MET = {l1extramctruth & l1s1MET & pre1MET , hlt1MET91}
+
+	path HLT2jetAco     = {l1extramctruth & l1s2jetAco     & pre2jetAco     ,hlt2jet200, hlt2jetAco}
+	path HLT1jet1METAco = {l1extramctruth & l1s1jet1METAco & pre1jet1METAco & hlt1MET80 & hlt1jet100 , hlt1jet1METAco}
+
+// jets + met triggers
+	path HLT1jet1MET = {l1extramctruth & l1s1jet1MET & pre1jet1MET & hlt1MET80 & hlt1jet180}
+	path HLT2jet1MET = {l1extramctruth & l1s2jet1MET & pre2jet1MET & hlt1MET80 & hlt2jet155}
+	path HLT3jet1MET = {l1extramctruth & l1s3jet1MET & pre3jet1MET & hlt1MET80 & hlt3jet85}
+	path HLT4jet1MET = {l1extramctruth & l1s4jet1MET & pre4jet1MET & hlt1MET80 & hlt4jet35}
+
+// HT triggers
+
+	path HLT1MET1HT = {l1extramctruth & l1s1MET1HT & pre1MET1HT & (hlt1MET80, hlt1HT350) }
+
+// jet triggers prescaled already at L1:
+	path HLT1jetPE1 = {l1extramctruth & l1s1jetPE1 & pre1jetPE1 & hlt1jet250}
+	path HLT1jetPE3 = {l1extramctruth & l1s1jetPE3 & pre1jetPE3 & hlt1jet120}
+	path HLT1jetPE5 = {l1extramctruth & l1s1jetPE5 & pre1jetPE5 & hlt1jet60}
