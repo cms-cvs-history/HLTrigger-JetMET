@@ -9,125 +9,63 @@
 
 //JetMET filters to be used in JetMET HLT paths
 
-// Single jet
-        module hlt1jet60 = HLT1CaloJet {
-                InputTag inputTag = midPointCone5CaloJets
-                double MinPt = 60.0
-                double MaxEta= 5.0
-                int32  MinN  = 1
-        }
+// Single jet triggers
+        module  hlt1jet60 = hlt1CaloJet from "HLTrigger/HLTexample/data/hlt1CaloJet.cfi"
+        replace hlt1jet60.MinPt = 60.0
 
-// Single jet
-        module hlt1jet100 = HLT1CaloJet {
-                InputTag inputTag = midPointCone5CaloJets
-                double MinPt = 100.0
-                double MaxEta= 5.0
-                int32  MinN  = 1
-        }
+        module  hlt1jet100 = hlt1CaloJet from "HLTrigger/HLTexample/data/hlt1CaloJet.cfi"
+        replace hlt1jet100.MinPt = 100.0
 
-// Single jet
-        module hlt1jet120 = HLT1CaloJet {
-                InputTag inputTag = midPointCone5CaloJets
-                double MinPt = 120.0
-                double MaxEta= 5.0
-                int32  MinN  = 1
-        }
+        module  hlt1jet120 = hlt1CaloJet from "HLTrigger/HLTexample/data/hlt1CaloJet.cfi"
+        replace hlt1jet120.MinPt = 120.0
 
-// Single jet
-        module hlt1jet180 = HLT1CaloJet {
-                InputTag inputTag = midPointCone5CaloJets
-                double MinPt = 180.0
-                double MaxEta= 5.0
-                int32  MinN  = 1
-        }
+        module  hlt1jet180 = hlt1CaloJet from "HLTrigger/HLTexample/data/hlt1CaloJet.cfi"
+        replace hlt1jet180.MinPt = 180.0
 
-// Single jet
-        module hlt1jet250 = HLT1CaloJet {
-                InputTag inputTag = midPointCone5CaloJets
-                double MinPt = 250.0
-                double MaxEta= 5.0
-                int32  MinN  = 1
-        }
+        module  hlt1jet250 = hlt1CaloJet from "HLTrigger/HLTexample/data/hlt1CaloJet.cfi"
+        replace hlt1jet250.MinPt = 250.0
 
-// Single jet
-        module hlt1jet400 = HLT1CaloJet {
-                InputTag inputTag = midPointCone5CaloJets
-                double MinPt = 400.0
-                double MaxEta= 5.0
-                int32  MinN  = 1
-        }
+        module  hlt1jet400 = hlt1CaloJet from "HLTrigger/HLTexample/data/hlt1CaloJet.cfi"
+        replace hlt1jet400.MinPt = 400.0
 
-// Double jet
-        module hlt2jet155 = HLT1CaloJet {
-                InputTag inputTag = midPointCone5CaloJets
-                double MinPt = 155.0
-                double MaxEta= 5.0
-                int32  MinN  = 2
-        }
+// Double jet triggers
+        module  hlt2jet155 = hlt1CaloJet from "HLTrigger/HLTexample/data/hlt1CaloJet.cfi"
+        replace hlt2jet155.MinPt = 155.0
+        replace hlt2jet155.MinN  = 2
 
-// Double jet
-        module hlt2jet200 = HLT1CaloJet {
-                InputTag inputTag = midPointCone5CaloJets
-                double MinPt = 200.0
-                double MaxEta= 5.0
-                int32  MinN  = 2
-        }
+        module  hlt2jet200 = hlt1CaloJet from "HLTrigger/HLTexample/data/hlt1CaloJet.cfi"
+        replace hlt2jet200.MinPt = 200.0
+        replace hlt2jet200.MinN  = 2
 
-// Double jet
-        module hlt2jet350 = HLT1CaloJet {
-                InputTag inputTag = midPointCone5CaloJets
-                double MinPt = 350.0
-                double MaxEta= 5.0
-                int32  MinN  = 2
-        }
+        module  hlt2jet350 = hlt1CaloJet from "HLTrigger/HLTexample/data/hlt1CaloJet.cfi"
+        replace hlt2jet350.MinPt = 350.0
+        replace hlt2jet350.MinN  = 2
 
-// Triple jet
-        module hlt3jet85 = HLT1CaloJet {
-                InputTag inputTag = midPointCone5CaloJets
-                double MinPt = 85.0
-                double MaxEta= 5.0
-                int32  MinN  = 3
-        }
+// Triple jet triggers
+        module  hlt3jet85 = hlt1CaloJet from "HLTrigger/HLTexample/data/hlt1CaloJet.cfi"
+        replace hlt3jet85.MinPt = 85.0
+        replace hlt3jet85.MinN  = 3
 
-// Triple jet
-        module hlt3jet195 = HLT1CaloJet {
-                InputTag inputTag = midPointCone5CaloJets
-                double MinPt = 195.0
-                double MaxEta= 5.0
-                int32  MinN  = 3
-        }
+        module  hlt3jet195 = hlt1CaloJet from "HLTrigger/HLTexample/data/hlt1CaloJet.cfi"
+        replace hlt3jet195.MinPt = 195.0
+        replace hlt3jet195.MinN  = 3
 
-// Quadruple jet
-        module hlt4jet35 = HLT1CaloJet {
-                InputTag inputTag = midPointCone5CaloJets
-                double MinPt = 35.0
-                double MaxEta= 5.0
-                int32  MinN  = 4
-        }
+// Quadruple jet triggers
+        module  hlt4jet35 = hlt1CaloJet from "HLTrigger/HLTexample/data/hlt1CaloJet.cfi"
+        replace hlt4jet35.MinPt = 35.0
+        replace hlt4jet35.MinN  = 4
 
-// Quadruple jet
-        module hlt4jet80 = HLT1CaloJet {
-                InputTag inputTag = midPointCone5CaloJets
-                double MinPt = 80.0
-                double MaxEta= 5.0
-                int32  MinN  = 4
-        }
+        module  hlt4jet80 = hlt1CaloJet from "HLTrigger/HLTexample/data/hlt1CaloJet.cfi"
+        replace hlt4jet80.MinPt = 80.0
+        replace hlt4jet80.MinN  = 4
 
 
 // MET
-	module hlt1MET80 = HLT1CaloMET {
-                InputTag inputTag = met
-                double MinPt = 80.0
-                double MaxEta= -1.0 // negative = no cut
-                int32  MinN  = 1
-        }
+        module  hlt1MET80 = hlt1CaloMET from "HLTrigger/HLTexample/data/hlt1CaloMET.cfi"
+        replace hlt1MET80.MinPt = 80.0
 
-	module hlt1MET91 = HLT1CaloMET {
-                InputTag inputTag = met
-                double MinPt = 91.0
-                double MaxEta= -1.0 // negative = no cut
-                int32  MinN  = 1
-        }
+        module  hlt1MET91 = hlt1CaloMET from "HLTrigger/HLTexample/data/hlt1CaloMET.cfi"
+        replace hlt1MET91.MinPt = 91.0
 
 // MET HT
 	module hlt1HT350 = HLTGlobalSums {
