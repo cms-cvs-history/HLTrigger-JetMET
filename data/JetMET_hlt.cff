@@ -6,7 +6,6 @@
 // MET reco module for HLT
 //include "RecoMET/METProducers/data/CaloMET.cfi"
 
-
 //JetMET filters to be used in JetMET HLT paths
 
 // Single jet triggers
@@ -171,29 +170,29 @@
 
 
 // jet triggers
-	path HLT1jet = {l1extramctruth & l1s1jet & pre1jet , hlt1jet400}
-	path HLT2jet = {l1extramctruth & l1s2jet & pre2jet , hlt2jet350}
-	path HLT3jet = {l1extramctruth & l1s3jet & pre3jet , hlt3jet195}
-	path HLT4jet = {l1extramctruth & l1s4jet & pre4jet , hlt4jet80 }
+	path HLT1jet = {l1prod & l1s1jet & pre1jet & recoJetMETPath, hlt1jet400}
+	path HLT2jet = {l1prod & l1s2jet & pre2jet & recoJetMETPath, hlt2jet350}
+	path HLT3jet = {l1prod & l1s3jet & pre3jet & recoJetMETPath, hlt3jet195}
+	path HLT4jet = {l1prod & l1s4jet & pre4jet & recoJetMETPath, hlt4jet80 }
 
 
 // met trigger
-	path HLT1MET = {l1extramctruth & l1s1MET & pre1MET , hlt1MET91}
+	path HLT1MET = {l1prod & l1s1MET & pre1MET , hlt1MET91}
 
-	path HLT2jetAco     = {l1extramctruth & l1s2jetAco     & pre2jetAco     ,hlt2jet200, hlt2jetAco}
-	path HLT1jet1METAco = {l1extramctruth & l1s1jet1METAco & pre1jet1METAco & hlt1MET80 & hlt1jet100 , hlt1jet1METAco}
+	path HLT2jetAco     = {l1prod & l1s2jetAco     & pre2jetAco     & recoJetMETPath , hlt2jet200, hlt2jetAco}
+	path HLT1jet1METAco = {l1prod & l1s1jet1METAco & pre1jet1METAco & recoJetMETPath & hlt1MET80 & hlt1jet100 , hlt1jet1METAco}
 
 // jets + met triggers
-	path HLT1jet1MET = {l1extramctruth & l1s1jet1MET & pre1jet1MET & hlt1MET80 & hlt1jet180}
-	path HLT2jet1MET = {l1extramctruth & l1s2jet1MET & pre2jet1MET & hlt1MET80 & hlt2jet155}
-	path HLT3jet1MET = {l1extramctruth & l1s3jet1MET & pre3jet1MET & hlt1MET80 & hlt3jet85}
-	path HLT4jet1MET = {l1extramctruth & l1s4jet1MET & pre4jet1MET & hlt1MET80 & hlt4jet35}
+	path HLT1jet1MET = {l1prod & l1s1jet1MET & pre1jet1MET & recoJetMETPath & hlt1MET80 & hlt1jet180}
+	path HLT2jet1MET = {l1prod & l1s2jet1MET & pre2jet1MET & recoJetMETPath & hlt1MET80 & hlt2jet155}
+	path HLT3jet1MET = {l1prod & l1s3jet1MET & pre3jet1MET & recoJetMETPath & hlt1MET80 & hlt3jet85}
+	path HLT4jet1MET = {l1prod & l1s4jet1MET & pre4jet1MET & recoJetMETPath & hlt1MET80 & hlt4jet35}
 
 // HT triggers
 
-	path HLT1MET1HT = {l1extramctruth & l1s1MET1HT & pre1MET1HT & (hlt1MET80, hlt1HT350) }
+	path HLT1MET1HT = {l1prod & l1s1MET1HT & pre1MET1HT & recoJetMETPath & (hlt1MET80, hlt1HT350) }
 
 // jet triggers prescaled already at L1:
-	path HLT1jetPE1 = {l1extramctruth & l1s1jetPE1 & pre1jetPE1 & hlt1jet250}
-	path HLT1jetPE3 = {l1extramctruth & l1s1jetPE3 & pre1jetPE3 & hlt1jet120}
-	path HLT1jetPE5 = {l1extramctruth & l1s1jetPE5 & pre1jetPE5 & hlt1jet60}
+	path HLT1jetPE1 = {l1prod & l1s1jetPE1 & pre1jetPE1 & recoJetMETPath & hlt1jet250}
+	path HLT1jetPE3 = {l1prod & l1s1jetPE3 & pre1jetPE3 & recoJetMETPath & hlt1jet120}
+	path HLT1jetPE5 = {l1prod & l1s1jetPE5 & pre1jetPE5 & recoJetMETPath & hlt1jet60}
