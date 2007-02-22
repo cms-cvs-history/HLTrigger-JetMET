@@ -19,6 +19,7 @@
 	path L12jet1MET = {l1prod & l1s2jet1MET }
 	path L13jet1MET = {l1prod & l1s3jet1MET }
 	path L14jet1MET = {l1prod & l1s4jet1MET }
+        path L12jetvbfMET={l1prod & l1s2jetvbfMET }
 
 // HT triggers
 

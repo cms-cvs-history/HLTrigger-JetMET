@@ -40,6 +40,12 @@
         replace hlt2jet350.MinPt = 350.0
         replace hlt2jet350.MinN  = 2
 
+	module hlt2jetvbf = HLTJetVBFFilter {
+	   InputTag inputTag = iterativeCone5CaloJets
+	   double minEt = 40.0
+           double minDeltaEta = 4.0	   
+        }
+
 // Triple jet triggers
         module  hlt3jet85 = hlt1CaloJet from "HLTrigger/HLTexample/data/hlt1CaloJet.cfi"
         replace hlt3jet85.MinPt = 85.0
@@ -114,6 +120,7 @@
         module  pre2jet1MET    = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre3jet1MET    = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre4jet1MET    = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        module  pre2jetvbfMET  = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre1MET1HT     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre1jetPE1     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre1jetPE3     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
@@ -154,6 +161,9 @@
 	module  l1s4jet1MET    = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
 	replace l1s4jet1MET.L1Seeds = {"MET"}
 
+	module  l1s2jetvbfMET    = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
+	replace l1s2jetvbfMET.L1Seeds = {"MET"}
+
 	module  l1s1MET1HT     = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
 	replace l1s1MET1HT.L1Seeds = {"HT"}
 
@@ -187,6 +197,8 @@
 	path HLT2jet1MET = {l1prod & l1s2jet1MET & pre2jet1MET & recoJetMETPath & hlt1MET80 & hlt2jet155}
 	path HLT3jet1MET = {l1prod & l1s3jet1MET & pre3jet1MET & recoJetMETPath & hlt1MET80 & hlt3jet85}
 	path HLT4jet1MET = {l1prod & l1s4jet1MET & pre4jet1MET & recoJetMETPath & hlt1MET80 & hlt4jet35}
+
+	path HLT2jetvbfMET = {l1prod & l1s2jetvbfMET & pre2jetvbfMET & recoJetMETPath & hlt1MET80 & hlt2jetvbf}
 
 // HT triggers
 
