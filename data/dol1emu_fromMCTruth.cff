@@ -1,0 +1,9 @@
+#
+# setup for doing l1extra from MCTruth
+#
+include "L1Trigger/L1ExtraFromMCTruthProd/data/l1extramctruth.cfi"
+replace l1extramctruth.jetSource = iterativeCone5GenJets
+replace l1extramctruth.singleJet140Prescale = 1
+replace l1extramctruth.singleJet60Prescale = 1
+replace l1extramctruth.singleJet20Prescale = 1
+replace l1extramctruth.minBiasPrescale = 1
