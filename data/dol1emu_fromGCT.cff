@@ -1,8 +1,0 @@
-#
-# setup for doing l1extra from l1emulator
-#
-include "L1Trigger/L1ExtraFromDigis/data/l1extra.cff"
-replace l1extraParticleMap.singleJet140Prescale = 1
-replace l1extraParticleMap.singleJet60Prescale = 1
-replace l1extraParticleMap.singleJet20Prescale = 1
-replace l1extraParticleMap.minBiasPrescale = 1
