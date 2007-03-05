@@ -131,17 +131,17 @@
 
 
 // jet triggers
-	path HLT1jet = {l1prod & l1s1jet & pre1jet & recoJetMETPath, hlt1jet400}
-	path HLT2jet = {l1prod & l1s2jet & pre2jet & recoJetMETPath, hlt2jet350}
-	path HLT3jet = {l1prod & l1s3jet & pre3jet & recoJetMETPath, hlt3jet195}
-	path HLT4jet = {l1prod & l1s4jet & pre4jet & recoJetMETPath, hlt4jet80 }
+	path HLT1jet = {l1prod & l1s1jet & pre1jet & recoJetMETPath & hlt1jet400}
+	path HLT2jet = {l1prod & l1s2jet & pre2jet & recoJetMETPath & hlt2jet350}
+	path HLT3jet = {l1prod & l1s3jet & pre3jet & recoJetMETPath & hlt3jet195}
+	path HLT4jet = {l1prod & l1s4jet & pre4jet & recoJetMETPath & hlt4jet80 }
 
 
 // met trigger
-	path HLT1MET = {l1prod & l1s1MET & pre1MET , hlt1MET91}
+	path HLT1MET = {l1prod & l1s1MET & pre1MET & recoJetMETPath & hlt1MET91}
 
-	path HLT2jetAco     = {l1prod & l1s2jetAco     & pre2jetAco     & recoJetMETPath , hlt2jet200, hlt2jetAco}
-	path HLT1jet1METAco = {l1prod & l1s1jet1METAco & pre1jet1METAco & recoJetMETPath & hlt1MET80 & hlt1jet100 , hlt1jet1METAco}
+	path HLT2jetAco     = {l1prod & l1s2jetAco     & pre2jetAco     & recoJetMETPath & hlt2jet200 & hlt2jetAco}
+	path HLT1jet1METAco = {l1prod & l1s1jet1METAco & pre1jet1METAco & recoJetMETPath & hlt1MET80 & hlt1jet100 & hlt1jet1METAco}
 
 // jets + met triggers
 	path HLT1jet1MET = {l1prod & l1s1jet1MET & pre1jet1MET & recoJetMETPath & hlt1MET80 & hlt1jet180}
@@ -153,7 +153,7 @@
 
 // HT triggers
 
-	path HLT1MET1HT = {l1prod & l1s1MET1HT & pre1MET1HT & recoJetMETPath & (hlt1MET80, hlt1HT350) }
+	path HLT1MET1HT = {l1prod & l1s1MET1HT & pre1MET1HT & recoJetMETPath & (hlt1MET80 & hlt1HT350) }
 
 // jet triggers prescaled already at L1:
 	path HLT1jetPE1 = {l1prod & l1s1jetPE1 & pre1jetPE1 & recoJetMETPath & hlt1jet250}
