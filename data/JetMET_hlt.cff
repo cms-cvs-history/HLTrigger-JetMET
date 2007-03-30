@@ -72,9 +72,18 @@
         module  hlt1MET91 = hlt1CaloMET from "HLTrigger/HLTfilters/data/hlt1CaloMET.cfi"
         replace hlt1MET91.MinPt = 91.0
 
-// MET HT
-	module hlt1HT350 = HLTGlobalSums {
-		InputTag inputTag = met
+// old MET HT using met sumEt (saved for backwards compatability (module name was HLTGlobalSums))
+//	module hlt1MET350 = HLTGlobalSumMET {
+//		InputTag inputTag = met
+//		string observable = "sumEt"
+//		double   Min = 350.0
+//		double   Max = -1.0
+//		int32    MinN = 1
+//}
+
+// JET HT
+	module hlt1HT350 = HLTGlobalSumHT {
+		InputTag inputTag = htMet
 		string observable = "sumEt"
 		double   Min = 350.0
 		double   Max = -1.0
