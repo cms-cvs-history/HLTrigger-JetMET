@@ -40,11 +40,14 @@
         replace hlt2jet350.MinPt = 350.0
         replace hlt2jet350.MinN  = 2
 
-	module hlt2jetvbf = HLTJetVBFFilter {
-	   InputTag inputTag = iterativeCone5CaloJets
-	   double minEt = 40.0
-           double minDeltaEta = 4.2	   
-        }
+	//module hlt2jetvbf = HLTJetVBFFilter {
+	//   InputTag inputTag = iterativeCone5CaloJets
+	//   double minEt = 40.0
+        //   double minDeltaEta = 4.2	   
+        //}
+
+        module  hlt2jetvbf = hltJetVBFFilter from "HLTrigger/JetMET/data/hltJetVBFFilter.cfi"
+        replace hlt2jetvbf.inputTag = MCJetCorJetIcone5
 
 // Triple jet triggers
         module  hlt3jet85 = hlt1CaloJet from "HLTrigger/HLTexample/data/hlt1CaloJet.cfi"
