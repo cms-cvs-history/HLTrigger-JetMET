@@ -15,6 +15,9 @@
 	module  l1s1MET        = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
 	replace l1s1MET.L1Seeds = {"A_ETM60"}
 
+	module  l1s1HT         = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
+	replace l1s1HT.L1Seeds = {"A_HTT300"}
+
 	module  l1s1jet1MET    = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
 	replace l1s1jet1MET.L1Seeds = {"A_ETM60"}
 
