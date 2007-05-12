@@ -187,7 +187,7 @@
         path HLT2jetvbfMET = {JetMET2jetvbfMET}
 
 // HT triggers
-        path HLT1HT     = {JetMET1HT}
+        // path HLT1HT     = {JetMET1HT}
         path HLT1MET1HT = {JetMET1MET1HT}
 
 // jet triggers prescaled already at L1:
