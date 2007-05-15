@@ -1,9 +1,9 @@
-include "HLTrigger/JetMET/data/JetMET_hlt.cff" // full hlt trigger paths
+include "HLTrigger/JetMET/data/JetMET_hlt.cff" // JetMET trigger sequences
 // jet triggers
         path HLT1jet = {JetMET1jet}
-        path HLT2jet = {JetMET1jet}
-        path HLT3jet = {JetMET1jet}
-        path HLT4jet = {JetMET1jet}
+        path HLT2jet = {JetMET2jet}
+        path HLT3jet = {JetMET3jet}
+        path HLT4jet = {JetMET4jet}
 
 // met trigger
         path HLT1MET = {JetMET1MET}
