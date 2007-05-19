@@ -19,7 +19,7 @@
         replace l1s3jet.L1GTReadoutRecord  = l1extraParticleMap
 
 	module  l1s4jet        = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
-	replace l1s4jet.L1Seeds = {"A_SingleJet200","A_DoubleJet100","A_TripleJet50","A_QuadJet50"}
+	replace l1s4jet.L1Seeds = {"A_SingleJet200","A_DoubleJet100","A_TripleJet50","A_QuadJet30"}
         replace l1s4jet.L1ExtraCollections = l1extraParticles
         replace l1s4jet.L1ExtraParticleMap = l1extraParticleMap
         replace l1s4jet.L1GTReadoutRecord  = l1extraParticleMap

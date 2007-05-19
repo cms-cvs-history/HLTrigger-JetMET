@@ -10,7 +10,7 @@
 	replace l1s3jet.L1Seeds = {"A_SingleJet200","A_DoubleJet100","A_TripleJet50"}
 
 	module  l1s4jet        = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
-	replace l1s4jet.L1Seeds = {"A_SingleJet200","A_DoubleJet100","A_TripleJet50","A_QuadJet50"}
+	replace l1s4jet.L1Seeds = {"A_SingleJet200","A_DoubleJet100","A_TripleJet50","A_QuadJet30"}
 
 	module  l1s1MET        = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
 	replace l1s1MET.L1Seeds = {"A_ETM60"}
