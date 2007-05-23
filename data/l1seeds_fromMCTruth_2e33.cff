@@ -1,16 +1,7 @@
-// L1 Seed filters for startup luminosity L=10^32 cm-2s-1
+// L1 Seed filters for luminosity L=2 x 10^33 cm-2s-1
 
 	module  l1s1jet        = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
 	replace l1s1jet.L1Seeds = {"A_SingleJet200"}
-
-	module  l1s1jetPE1     = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
-	replace l1s1jetPE1.L1Seeds = {"A_SingleJet50"}
-
-	module  l1s1jetPE3     = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
-	replace l1s1jetPE3.L1Seeds = {"A_SingleJet20"}
-
-	module  l1s1jetPE5     = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
-	replace l1s1jetPE5.L1Seeds = {"A_SingleJet20"}
 
 	module  l1s2jet        = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
 	replace l1s2jet.L1Seeds = {"A_SingleJet200","A_DoubleJet100"}
@@ -22,31 +13,40 @@
 	replace l1s4jet.L1Seeds = {"A_SingleJet200","A_DoubleJet100","A_TripleJet50","A_QuadJet30"}
 
 	module  l1s1MET        = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
-	replace l1s1MET.L1Seeds = {"A_ETM50"}
+	replace l1s1MET.L1Seeds = {"A_ETM60"}
 
-	module  l1s1HT     = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
+	module  l1s1HT         = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
 	replace l1s1HT.L1Seeds = {"A_HTT300"}
 
 	module  l1s1jet1MET    = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
-	replace l1s1jet1MET.L1Seeds = {"A_ETM50"}
+	replace l1s1jet1MET.L1Seeds = {"A_ETM60"}
 
 	module  l1s2jetAco     = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
 	replace l1s2jetAco.L1Seeds = {"A_SingleJet200","A_DoubleJet100"}
 
 	module  l1s1jet1METAco = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
-	replace l1s1jet1METAco.L1Seeds = {"A_ETM50"}
+	replace l1s1jet1METAco.L1Seeds = {"A_ETM60"}
 
 	module  l1s2jet1MET    = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
-	replace l1s2jet1MET.L1Seeds = {"A_ETM50"}
+	replace l1s1jet1METAco.L1Seeds = {"A_ETM60"}
 
 	module  l1s3jet1MET    = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
-	replace l1s3jet1MET.L1Seeds = {"A_ETM50"}
+	replace l1s1jet1METAco.L1Seeds = {"A_ETM60"}
 
 	module  l1s4jet1MET    = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
-	replace l1s4jet1MET.L1Seeds = {"A_ETM50"}
+	replace l1s1jet1METAco.L1Seeds = {"A_ETM60"}
 
 	module  l1s2jetvbfMET    = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
-	replace l1s2jetvbfMET.L1Seeds = {"A_ETM50"}
+	replace l1s1jet1METAco.L1Seeds = {"A_ETM60"}
 
 	module  l1s1MET1HT     = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
 	replace l1s1MET1HT.L1Seeds = {"A_HTT300"}
+
+	module  l1s1jetPE1     = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
+	replace l1s1jetPE1.L1Seeds = {"A_SingleJet150"}
+
+	module  l1s1jetPE3     = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
+	replace l1s1jetPE3.L1Seeds = {"A_SingleJet50"}
+
+	module  l1s1jetPE5     = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
+	replace l1s1jetPE5.L1Seeds = {"A_SingleJet20"}
