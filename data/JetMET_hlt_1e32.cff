@@ -1,6 +1,10 @@
 //JetMET filters to be used in JetMET HLT paths for luminosity L=10^32 cm-2s-1
 
 // Single jet triggers
+
+        module  hlt1jet30 = hlt1CaloJet from "HLTrigger/HLTexample/data/hlt1CaloJet.cfi"
+        replace hlt1jet30.MinPt = 30.0
+
         module  hlt1jet60 = hlt1CaloJet from "HLTrigger/HLTexample/data/hlt1CaloJet.cfi"
         replace hlt1jet60.MinPt = 60.0
 
@@ -158,7 +162,7 @@
 
         sequence JetMET1jetPE1  = {hltBegin & l1s1jetPE1 & pre1jetPE1 & recoJetMETPath & hlt1jet120}
         sequence JetMET1jetPE3  = {hltBegin & l1s1jetPE3 & pre1jetPE3 & recoJetMETPath & hlt1jet60}
-        sequence JetMET1jetPE5  = {hltBegin & l1s1jetPE5 & pre1jetPE5 & recoJetMETPath & hlt1jet60}
+        sequence JetMET1jetPE5  = {hltBegin & l1s1jetPE5 & pre1jetPE5 & recoJetMETPath & hlt1jet30}
 
         sequence JetMET2jet = {hltBegin & l1s2jet & pre2jet & recoJetMETPath & hlt2jet200}
         sequence JetMET3jet = {hltBegin & l1s3jet & pre3jet & recoJetMETPath & hlt3jet100}
