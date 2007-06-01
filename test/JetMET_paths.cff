@@ -20,6 +20,10 @@ include "HLTrigger/JetMET/data/JetMET_hlt.cff" // JetMET trigger sequences
 // vbf trigger
         path HLT2jetvbfMET = {JetMET2jetvbfMET}
 
+// SUSY triggers
+	path HLTNV = {JetMETNV}
+	path HLTPhi2METaco = {JetMETPhi2METaco}
+
 // HT triggers
         // path HLT1HT     = {JetMET1HT}
         path HLT1MET1HT = {JetMET1MET1HT}

@@ -119,6 +119,17 @@
                 int32  MinN  = 1
 	}
 
+// New SUSY filters 
+        module hltnv = hltNVFilter from "HLTrigger/JetMET/data/hltNVFilter.cfi"
+        replace hltnv.inputMETTag = hlt1MET80
+        replace hltnv.minEtJet1 = 80.
+        replace hltnv.minEtJet2 = 80.
+
+        module hltPhi2metAco = hltPhi2METFilter from "HLTrigger/JetMET/data/hltPhi2METFilter.cfi"
+        replace hltPhi2METFilter.inputMETTag = hlt1MET80
+        replace hltPhi2METFilter.minEtJet1 = 80.
+        replace hltPhi2METFilter.minEtJet2= 80.
+
 // HLTPrescaler module in each path (for dynamic prescale changes)
 
         module  pre1jet        = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"

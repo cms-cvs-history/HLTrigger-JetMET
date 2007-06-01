@@ -78,6 +78,18 @@
         replace l1s2jetvbfMET.L1ExtraParticleMap = l1extraParticleMap
         replace l1s2jetvbfMET.L1GTReadoutRecord  = l1extraParticleMap
 
+	module  l1snvMET    = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
+	replace l1snvMET.L1Seeds = {"A_ETM60"}
+        replace l1snvMET.L1ExtraCollections = l1extraParticles
+        replace l1snvMET.L1ExtraParticleMap = l1extraParticleMap
+        replace l1snvMET.L1GTReadoutRecord  = l1extraParticleMap
+
+	module  l1sPhi2MET    = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
+	replace l1sPhi2MET.L1Seeds = {"A_ETM60"}
+        replace l1sPhi2MET.L1ExtraCollections = l1extraParticles
+        replace l1sPhi2MET.L1ExtraParticleMap = l1extraParticleMap
+        replace l1sPhi2MET.L1GTReadoutRecord  = l1extraParticleMap
+
 	module  l1s1MET1HT     = hltLevel1Seed from "HLTrigger/HLTexample/data/hltLevel1Seed.cfi"
 	replace l1s1MET1HT.L1Seeds = {"A_HTT300"}
         replace l1s1MET1HT.L1ExtraCollections = l1extraParticles

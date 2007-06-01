@@ -1,0 +1,7 @@
+module hltNVFilter = HLTNVFilter {
+   InputTag inputJetTag = iterativeCone5CaloJets
+   InputTag inputMETTag =hlt1MET60
+   double minNV = 0.1
+   double minEtJet1 = 80.
+   double minEtJet2 = 20.	   
+}
