@@ -11,8 +11,14 @@
         module  hlt1jet100 = hlt1CaloJet from "HLTrigger/HLTexample/data/hlt1CaloJet.cfi"
         replace hlt1jet100.MinPt = 100.0
 
+        module  hlt1jet110 = hlt1CaloJet from "HLTrigger/HLTexample/data/hlt1CaloJet.cfi"
+        replace hlt1jet110.MinPt = 110.0
+
         module  hlt1jet120 = hlt1CaloJet from "HLTrigger/HLTexample/data/hlt1CaloJet.cfi"
         replace hlt1jet120.MinPt = 120.0
+
+        module  hlt1jet150 = hlt1CaloJet from "HLTrigger/HLTexample/data/hlt1CaloJet.cfi"
+        replace hlt1jet150.MinPt = 150.0
 
         module  hlt1jet180 = hlt1CaloJet from "HLTrigger/HLTexample/data/hlt1CaloJet.cfi"
         replace hlt1jet180.MinPt = 180.0
@@ -163,16 +169,16 @@
         module  prephi2met     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre1MET1HT     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre1jetPE1     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        replace pre1jetPE1.prescaleFactor=10
         module  pre1jetPE3     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre1jetPE5     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
-	replace pre1jetPE5.prescaleFactor=1000000000
 
 // HLT JetMET trigger sequences
         sequence JetMET1jet = {hltBegin & l1s1jet & pre1jet & recoJetMETPath & hlt1jet250}
 
-        sequence JetMET1jetPE1  = {hltBegin & l1s1jetPE1 & pre1jetPE1 & recoJetMETPath & hlt1jet120}
-        sequence JetMET1jetPE3  = {hltBegin & l1s1jetPE3 & pre1jetPE3 & recoJetMETPath & hlt1jet60}
-        sequence JetMET1jetPE5  = {hltBegin & l1s1jetPE5 & pre1jetPE5 & recoJetMETPath & hlt1jet30}
+        sequence JetMET1jetPE1  = {hltBegin & l1s1jetPE1 & pre1jetPE1 & recoJetMETPath & hlt1jet150}
+        sequence JetMET1jetPE3  = {hltBegin & l1s1jetPE3 & pre1jetPE3 & recoJetMETPath & hlt1jet110}
+        sequence JetMET1jetPE5  = {hltBegin & l1s1jetPE5 & pre1jetPE5 & recoJetMETPath & hlt1jet60}
 
         sequence JetMET2jet = {hltBegin & l1s2jet & pre2jet & recoJetMETPath & hlt2jet200}
         sequence JetMET3jet = {hltBegin & l1s3jet & pre3jet & recoJetMETPath & hlt3jet100}
