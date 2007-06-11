@@ -233,4 +233,4 @@
 	sequence JetMETPhi2METaco = {hltBegin & l1sPhi2MET & prephi2met & recoJetMETPath & hlt1MET60 & hltPhi2metAco}
 
         sequence JetMET1HT = {hltBegin & l1s1HT     & pre1MET1HT & recoJetMETPath & hlt1HT400 }
-        sequence JetMET1MET1HT = {hltBegin & l1s1MET1HT & pre1MET1HT & recoJetMETPath & (hlt1MET80 & hlt1HT350) }
+        sequence JetMET1MET1HT = {hltBegin & l1s1MET1HT & pre1MET1HT & recoJetMETPath & (hlt1MET65 & hlt1HT350) }
