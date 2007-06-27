@@ -49,10 +49,10 @@
 	replace l1s2jetvbfMET.L1Seeds = {"A_ETM50"}
 
 	module  l1snvMET    = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1snvMET.L1Seeds = {"A_ETM30"}
+	replace l1snvMET.L1Seeds = {"A_ETM50"}
 
 	module  l1sPhi2MET    = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1sPhi2MET.L1Seeds = {"A_ETM30"}
+	replace l1sPhi2MET.L1Seeds = {"A_ETM50"}
 
 	module  l1s1MET1HT     = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
 	replace l1s1MET1HT.L1Seeds = {"A_HTT300"}
