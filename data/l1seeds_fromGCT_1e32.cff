@@ -1,116 +1,116 @@
 // L1 Seed filters
 
 	module  l1s1jet        = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1s1jet.L1Seeds = {"A_SingleJet150"}
+	replace l1s1jet.L1Seeds = {"L1_SingleJet150"}
         replace l1s1jet.L1ExtraCollections = l1extraParticles
         replace l1s1jet.L1ExtraParticleMap = l1extraParticleMap
         replace l1s1jet.L1GTReadoutRecord  = l1extraParticleMap
 
 	module  l1s1jetPE1     = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1s1jetPE1.L1Seeds = {"A_SingleJet100"}
+	replace l1s1jetPE1.L1Seeds = {"L1_SingleJet100"}
         replace l1s1jetPE1.L1ExtraCollections = l1extraParticles
         replace l1s1jetPE1.L1ExtraParticleMap = l1extraParticleMap
         replace l1s1jetPE1.L1GTReadoutRecord  = l1extraParticleMap
 
 	module  l1s1jetPE3     = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1s1jetPE3.L1Seeds = {"A_SingleJet70"}
+	replace l1s1jetPE3.L1Seeds = {"L1_SingleJet70"}
         replace l1s1jetPE3.L1ExtraCollections = l1extraParticles
         replace l1s1jetPE3.L1ExtraParticleMap = l1extraParticleMap
         replace l1s1jetPE3.L1GTReadoutRecord  = l1extraParticleMap
 
 	module  l1s1jetPE5     = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1s1jetPE5.L1Seeds = {"A_SingleJet30"}
+	replace l1s1jetPE5.L1Seeds = {"L1_SingleJet30"}
         replace l1s1jetPE5.L1ExtraCollections = l1extraParticles
         replace l1s1jetPE5.L1ExtraParticleMap = l1extraParticleMap
         replace l1s1jetPE5.L1GTReadoutRecord  = l1extraParticleMap
 
 
 	module  l1s2jet        = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1s2jet.L1Seeds = {"A_SingleJet150","A_DoubleJet70"}
+	replace l1s2jet.L1Seeds = {"L1_SingleJet150","L1_DoubleJet70"}
         replace l1s2jet.L1ExtraCollections = l1extraParticles
         replace l1s2jet.L1ExtraParticleMap = l1extraParticleMap
         replace l1s2jet.L1GTReadoutRecord  = l1extraParticleMap
 
 	module  l1s3jet        = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1s3jet.L1Seeds = {"A_SingleJet150","A_DoubleJet70","A_TripleJet50"}
+	replace l1s3jet.L1Seeds = {"L1_SingleJet150","L1_DoubleJet70","L1_TripleJet50"}
         replace l1s3jet.L1ExtraCollections = l1extraParticles
         replace l1s3jet.L1ExtraParticleMap = l1extraParticleMap
         replace l1s3jet.L1GTReadoutRecord  = l1extraParticleMap
 
 	module  l1s4jet        = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1s4jet.L1Seeds = {"A_SingleJet150","A_DoubleJet70","A_TripleJet50","A_QuadJet30"}
+	replace l1s4jet.L1Seeds = {"L1_SingleJet150","L1_DoubleJet70","L1_TripleJet50","L1_QuadJet30"}
         replace l1s4jet.L1ExtraCollections = l1extraParticles
         replace l1s4jet.L1ExtraParticleMap = l1extraParticleMap
         replace l1s4jet.L1GTReadoutRecord  = l1extraParticleMap
 
 	module  l1s1MET        = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1s1MET.L1Seeds = {"A_ETM40"}
+	replace l1s1MET.L1Seeds = {"L1_ETM40"}
         replace l1s1MET.L1ExtraCollections = l1extraParticles
         replace l1s1MET.L1ExtraParticleMap = l1extraParticleMap
         replace l1s1MET.L1GTReadoutRecord  = l1extraParticleMap
 
 	module  l1s1HT     = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1s1HT.L1Seeds = {"A_HTT300"}
+	replace l1s1HT.L1Seeds = {"L1_HTT300"}
         replace l1s1HT.L1ExtraCollections = l1extraParticles
         replace l1s1HT.L1ExtraParticleMap = l1extraParticleMap
         replace l1s1HT.L1GTReadoutRecord  = l1extraParticleMap
 
 	module  l1s1jet1MET    = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1s1jet1MET.L1Seeds = {"A_ETM30"}
+	replace l1s1jet1MET.L1Seeds = {"L1_ETM30"}
         replace l1s1jet1MET.L1ExtraCollections = l1extraParticles
         replace l1s1jet1MET.L1ExtraParticleMap = l1extraParticleMap
         replace l1s1jet1MET.L1GTReadoutRecord  = l1extraParticleMap
 
 	module  l1s2jetAco     = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1s2jetAco.L1Seeds = {"A_SingleJet150","A_DoubleJet70"}
+	replace l1s2jetAco.L1Seeds = {"L1_SingleJet150","L1_DoubleJet70"}
         replace l1s2jetAco.L1ExtraCollections = l1extraParticles
         replace l1s2jetAco.L1ExtraParticleMap = l1extraParticleMap
         replace l1s2jetAco.L1GTReadoutRecord  = l1extraParticleMap
 
 	module  l1s1jet1METAco = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1s1jet1METAco.L1Seeds = {"A_ETM30"}
+	replace l1s1jet1METAco.L1Seeds = {"L1_ETM30"}
         replace l1s1jet1METAco.L1ExtraCollections = l1extraParticles
         replace l1s1jet1METAco.L1ExtraParticleMap = l1extraParticleMap
         replace l1s1jet1METAco.L1GTReadoutRecord  = l1extraParticleMap
 
 	module  l1s2jet1MET    = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1s2jet1MET.L1Seeds = {"A_ETM30"}
+	replace l1s2jet1MET.L1Seeds = {"L1_ETM30"}
         replace l1s2jet1MET.L1ExtraCollections = l1extraParticles
         replace l1s2jet1MET.L1ExtraParticleMap = l1extraParticleMap
         replace l1s2jet1MET.L1GTReadoutRecord  = l1extraParticleMap
 
 	module  l1s3jet1MET    = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1s3jet1MET.L1Seeds = {"A_ETM30"}
+	replace l1s3jet1MET.L1Seeds = {"L1_ETM30"}
         replace l1s3jet1MET.L1ExtraCollections = l1extraParticles
         replace l1s3jet1MET.L1ExtraParticleMap = l1extraParticleMap
         replace l1s3jet1MET.L1GTReadoutRecord  = l1extraParticleMap
 
 	module  l1s4jet1MET    = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1s4jet1MET.L1Seeds = {"A_ETM30"}
+	replace l1s4jet1MET.L1Seeds = {"L1_ETM30"}
         replace l1s4jet1MET.L1ExtraCollections = l1extraParticles
         replace l1s4jet1MET.L1ExtraParticleMap = l1extraParticleMap
         replace l1s4jet1MET.L1GTReadoutRecord  = l1extraParticleMap
 
 	module  l1s2jetvbfMET    = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1s2jetvbfMET.L1Seeds = {"A_ETM30"}
+	replace l1s2jetvbfMET.L1Seeds = {"L1_ETM30"}
         replace l1s2jetvbfMET.L1ExtraCollections = l1extraParticles
         replace l1s2jetvbfMET.L1ExtraParticleMap = l1extraParticleMap
         replace l1s2jetvbfMET.L1GTReadoutRecord  = l1extraParticleMap
 
 	module  l1snvMET    = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1snvMET.L1Seeds = {"A_ETM30"}
+	replace l1snvMET.L1Seeds = {"L1_ETM30"}
         replace l1snvMET.L1ExtraCollections = l1extraParticles
         replace l1snvMET.L1ExtraParticleMap = l1extraParticleMap
         replace l1snvMET.L1GTReadoutRecord  = l1extraParticleMap
 
 	module  l1sPhi2MET    = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1sPhi2MET.L1Seeds = {"A_ETM30"}
+	replace l1sPhi2MET.L1Seeds = {"L1_ETM30"}
         replace l1sPhi2MET.L1ExtraCollections = l1extraParticles
         replace l1sPhi2MET.L1ExtraParticleMap = l1extraParticleMap
         replace l1sPhi2MET.L1GTReadoutRecord  = l1extraParticleMap
 
 	module  l1s1MET1HT     = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1s1MET1HT.L1Seeds = {"A_HTT300"}
+	replace l1s1MET1HT.L1Seeds = {"L1_HTT300"}
         replace l1s1MET1HT.L1ExtraCollections = l1extraParticles
         replace l1s1MET1HT.L1ExtraParticleMap = l1extraParticleMap
         replace l1s1MET1HT.L1GTReadoutRecord  = l1extraParticleMap
