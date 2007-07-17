@@ -67,6 +67,9 @@
         module  hlt1MET91 = hlt1CaloMET from "HLTrigger/HLTfilters/data/hlt1CaloMET.cfi"
         replace hlt1MET91.MinPt = 91.0
 
+//Diffractive triggers
+	module hltRapGap = hltRapGapFilter from "HLTrigger/JetMET/data/hltRapGapFilter.cfi"
+
 // old MET HT using met sumEt (saved for backwards compatability (module name was HLTGlobalSums))
 //	module hlt1MET350 = HLTGlobalSumMET {
 //		InputTag inputTag = met
@@ -149,7 +152,7 @@
         module  pre1jetPE1     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre1jetPE3     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre1jetPE5     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
-
+	module  prerapgap      = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
 
 // HLT JetMET trigger sequences
         sequence JetMET1jet = {hltBegin & l1s1jet & pre1jet & recoJetMETPath & hlt1jet400}
@@ -175,3 +178,5 @@
         sequence JetMET1jetPE1  = {hltBegin & l1s1jetPE1 & pre1jetPE1 & recoJetMETPath & hlt1jet250}
         sequence JetMET1jetPE3  = {hltBegin & l1s1jetPE3 & pre1jetPE3 & recoJetMETPath & hlt1jet120}
         sequence JetMET1jetPE5  = {hltBegin & l1s1jetPE5 & pre1jetPE5 & recoJetMETPath & hlt1jet60}
+
+	sequence JetMETRapGap = {hltBegin & l1RapGap & prerapgap & recoJetMETPath & hltRapGap }

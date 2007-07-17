@@ -1,0 +1,6 @@
+module hltRapGapFilter = HLTRapGapFilter {
+   InputTag inputTag = iterativeCone5CaloJets
+   double minEta = 3.0
+   double maxEta = 5.0
+   double caloThresh = 20.0
+}
