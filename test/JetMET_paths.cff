@@ -1,46 +1,45 @@
 include "HLTrigger/JetMET/data/JetMET_hlt.cff" // JetMET trigger sequences
 // jet triggers
-        path HLT1jet = {JetMET1jet}
-        path HLT2jet = {JetMET2jet}
-        path HLT3jet = {JetMET3jet}
-        path HLT4jet = {JetMET4jet}
+path HLT1jet = {JetMET1jet}
+path HLT2jet = {JetMET2jet}
+path HLT3jet = {JetMET3jet}
+path HLT4jet = {JetMET4jet}
 
 // met trigger
-        path HLT1MET = {JetMET1MET}
-
-        path HLT2jetAco     = {JetMET2jetAco}
-        path HLT1jet1METAco = {JetMET1jet1METAco}
+path HLT1MET        = {JetMET1MET}
+path HLT2jetAco     = {JetMET2jetAco}
+path HLT1jet1METAco = {JetMET1jet1METAco}
 
 // jets + met triggers
-        path HLT1jet1MET = {JetMET1jet1MET}
-	path HLT2jet1MET = {JetMET2jet1MET}
-	path HLT3jet1MET = {JetMET3jet1MET}
-	path HLT4jet1MET = {JetMET4jet1MET}
-
-// vbf trigger
-        path HLT2jetvbfMET = {JetMET2jetvbfMET}
-
-// SUSY triggers
-	path HLTNV = {JetMETNV}
-	path HLTPhi2METaco = {JetMETPhi2METaco}
-        path HLTPhiJet1METaco = {JetMETPhiJet1METaco}
-        path HLTPhiJet2METaco = {JetMETPhiJet2METaco}
-        path HLTPhiJet1Jet2aco = {JetMETPhiJet1Jet2aco}
+path HLT1jet1MET = {JetMET1jet1MET}
+path HLT2jet1MET = {JetMET2jet1MET}
+path HLT3jet1MET = {JetMET3jet1MET}
+path HLT4jet1MET = {JetMET4jet1MET}
 
 // HT triggers
-        // path HLT1HT     = {JetMET1HT}
-        path HLT1MET1HT = {JetMET1MET1HT}
+// path HLT1HT     = {JetMET1HT}
+path HLT1MET1HT = {JetMET1MET1HT}
 
 // jet triggers prescaled already at L1:
-        path HLT1jetPE1 = {JetMET1jetPE1}
-        path HLT1jetPE3 = {JetMET1jetPE3} 
-        path HLT1jetPE5 = {JetMET1jetPE5}
-
-// Diffractive triggers
-	path HLTRapidityGap = {JetMETRapGap}
+path HLT1jetPE1 = {JetMET1jetPE1}
+path HLT1jetPE3 = {JetMET1jetPE3}
+path HLT1jetPE5 = {JetMET1jetPE5}
 
 // Dijet balance triggers
-        path HLTDiJetAve60  = {JetMETDiJetAve60}
-        path HLTDiJetAve110 = {JetMETDiJetAve110}
-        path HLTDiJetAve150 = {JetMETDiJetAve150}
-        path HLTDiJetAve200 = {JetMETDiJetAve200}
+path CandHLT2jetAve60  = {JetMETDiJetAve60}
+path CandHLT2jetAve110 = {JetMETDiJetAve110}
+path CandHLT2jetAve150 = {JetMETDiJetAve150}
+path CandHLT2jetAve200 = {JetMETDiJetAve200}
+
+// vbf trigger
+path HLT2jetvbfMET = {JetMET2jetvbfMET}
+
+// SUSY triggers
+path HLTS2jet1METNV  = {JetMETNV}
+path HLTS2jet1METAco = {JetMETPhi2METaco}
+path CandHLTSjet1MET1Aco = {JetMETPhiJet1METaco}
+path CandHLTSjet2MET1Aco = {JetMETPhiJet2METaco}
+path CandHLTS2jetAco     = {JetMETPhiJet1Jet2aco}
+
+// Diffractive triggers
+path CandHLTJetMETRapidityGap = {JetMETRapGap}
