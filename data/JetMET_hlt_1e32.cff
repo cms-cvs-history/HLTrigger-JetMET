@@ -108,6 +108,15 @@
 
 
 // MET
+        module  hlt1MET15 = hlt1CaloMET from "HLTrigger/HLTfilters/data/hlt1CaloMET.cfi"
+        replace hlt1MET15.MinPt = 15.0
+
+        module  hlt1MET20 = hlt1CaloMET from "HLTrigger/HLTfilters/data/hlt1CaloMET.cfi"
+        replace hlt1MET20.MinPt = 20.0
+
+        module  hlt1MET30 = hlt1CaloMET from "HLTrigger/HLTfilters/data/hlt1CaloMET.cfi"
+        replace hlt1MET30.MinPt = 30.0
+
         module  hlt1MET60 = hlt1CaloMET from "HLTrigger/HLTfilters/data/hlt1CaloMET.cfi"
         replace hlt1MET60.MinPt = 60.0
 
@@ -139,6 +148,14 @@
 //		int32    MinN = 1
 //}
 
+// SumEt filter
+	module hlt1SumET120 = HLTGlobalSumMET {
+		InputTag inputTag = met
+		string observable = "sumEt"
+		double   Min = 120.0
+		double   Max = -1.0
+		int32    MinN = 1
+}
 // JET HT
 	module hlt1HT350 = HLTGlobalSumHT {
 		InputTag inputTag = htMet
@@ -214,6 +231,9 @@
         module  pre3jet        = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre4jet        = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre1MET        = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        module  pre1METPre1    = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        module  pre1METPre2    = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        module  pre1METPre3    = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre1HT         = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre1jet1MET    = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre2jetAco     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
@@ -229,10 +249,14 @@
         module  prephi2met     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
 
         module  pre1MET1HT     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        module  pre1MET1SumET  = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+
         module  pre1jetPE1     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         replace pre1jetPE1.prescaleFactor=10
         module  pre1jetPE3     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre1jetPE5     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        module  pre1jetPE7     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+
 	module  prerapgap      = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  predijetave60     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  predijetave110     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
@@ -240,16 +264,21 @@
         module  predijetave200     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
 
 // HLT JetMET trigger sequences
-        sequence JetMET1jet = {hltBegin & l1s1jet & pre1jet & recoJetMETPath & hlt1jet200}
+        sequence JetMET1jet     = {hltBegin & l1s1jet & pre1jet & recoJetMETPath & hlt1jet200}
         sequence JetMET1jetPE1  = {hltBegin & l1s1jetPE1 & pre1jetPE1 & recoJetMETPath & hlt1jet150}
         sequence JetMET1jetPE3  = {hltBegin & l1s1jetPE3 & pre1jetPE3 & recoJetMETPath & hlt1jet110}
         sequence JetMET1jetPE5  = {hltBegin & l1s1jetPE5 & pre1jetPE5 & recoJetMETPath & hlt1jet60}
+        sequence JetMET1jetPE7  = {hltBegin & l1s1jetPE5 & pre1jetPE7 & recoJetMETPath & hlt1jet30}
 
         sequence JetMET2jet = {hltBegin & l1s2jet & pre2jet & recoJetMETPath & hlt2jet150}
         sequence JetMET3jet = {hltBegin & l1s3jet & pre3jet & recoJetMETPath & hlt3jet85}
         sequence JetMET4jet = {hltBegin & l1s4jet & pre4jet & recoJetMETPath & hlt4jet60 }
 
-        sequence JetMET1MET = {hltBegin & l1s1MET & pre1MET & recoJetMETPath & hlt1MET65}
+        sequence JetMET1MET     = {hltBegin & l1s1MET & pre1MET & recoJetMETPath & hlt1MET65}
+        sequence JetMET1METPre1 = {hltBegin & l1s1METPre1 & pre1METPre1 & recoJetMETPath & hlt1MET30}
+        sequence JetMET1METPre2 = {hltBegin & l1s1METPre2 & pre1METPre2 & recoJetMETPath & hlt1MET20}
+        sequence JetMET1METPre3 = {hltBegin & l1s1METPre3 & pre1METPre3 & recoJetMETPath & hlt1MET15}
+
 
         sequence JetMET2jetAco  = {hltBegin & l1s2jetAco  & pre2jetAco & recoJetMETPath & hlt2jet125 & hlt2jetAco}
 
@@ -267,6 +296,8 @@
         sequence JetMETPhiJet1METaco = {hltBegin & l1sPhiJet1MET & prephijet1met & recoJetMETPath & hlt1MET70 & hltPhiJet1metAco}
 	sequence JetMETPhiJet2METaco = {hltBegin & l1sPhiJet2MET & prephijet2met & recoJetMETPath & hlt1MET70 & hltPhiJet2metAco}
 	sequence JetMETPhiJet1Jet2aco =  {hltBegin & l1sPhiJet1Jet2 & prephijet1jet2 & recoJetMETPath & hlt1MET70 & hltPhiJet1Jet2Aco}
+
+        sequence JetMET1SumET = {hltBegin & l1s1SumET   & pre1MET1SumET & recoJetMETPath & hlt1SumET120}
 
         sequence JetMET1HT = {hltBegin & l1s1HT     & pre1MET1HT & recoJetMETPath & hlt1HT400 }
         sequence JetMET1MET1HT = {hltBegin & l1s1MET1HT & pre1MET1HT & recoJetMETPath & (hlt1MET65 & hlt1HT350) }
