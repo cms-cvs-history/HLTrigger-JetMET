@@ -174,20 +174,24 @@
 }
 // Dijet balance triggers
 
+        module  hltdijetave30 = hltDiJetAveFilter from "HLTrigger/JetMET/data/hltDiJetAveFilter.cfi"
+        replace hltdijetave30.inputJetTag  = MCJetCorJetIcone5
+        replace hltdijetave30.minEtAve  = 30.0
+
         module  hltdijetave60 = hltDiJetAveFilter from "HLTrigger/JetMET/data/hltDiJetAveFilter.cfi"
-        replace hltdijetave60.inputJetTag  = iterativeCone5CaloJets
+        replace hltdijetave60.inputJetTag  = MCJetCorJetIcone5
         replace hltdijetave60.minEtAve  = 60.0
 
         module  hltdijetave110 = hltDiJetAveFilter from "HLTrigger/JetMET/data/hltDiJetAveFilter.cfi"
-        replace hltdijetave110.inputJetTag  = iterativeCone5CaloJets
+        replace hltdijetave110.inputJetTag  = MCJetCorJetIcone5
         replace hltdijetave110.minEtAve  = 110.0
 
         module  hltdijetave150 = hltDiJetAveFilter from "HLTrigger/JetMET/data/hltDiJetAveFilter.cfi"
-        replace hltdijetave150.inputJetTag  = iterativeCone5CaloJets
+        replace hltdijetave150.inputJetTag  = MCJetCorJetIcone5
         replace hltdijetave150.minEtAve  = 150.0
 
         module  hltdijetave200 = hltDiJetAveFilter from "HLTrigger/JetMET/data/hltDiJetAveFilter.cfi"
-        replace hltdijetave200.inputJetTag  = iterativeCone5CaloJets
+        replace hltdijetave200.inputJetTag  = MCJetCorJetIcone5
         replace hltdijetave200.minEtAve  = 200.0
 
 // Double object filters (for acoplanarity cuts between 2 objects)
@@ -252,12 +256,13 @@
         module  pre1MET1SumET  = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
 
         module  pre1jetPE1     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
-        replace pre1jetPE1.prescaleFactor=10
+        //replace pre1jetPE1.prescaleFactor=10
         module  pre1jetPE3     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre1jetPE5     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre1jetPE7     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
 
 	module  prerapgap      = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        module  predijetave30     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  predijetave60     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  predijetave110     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  predijetave150     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
@@ -304,6 +309,7 @@
 	
 	sequence JetMETRapGap = {hltBegin & l1RapGap & prerapgap & recoJetMETPath & hltRapGap }
 
+        sequence JetMETDiJetAve30 =  {hltBegin & l1sdijetave30  & predijetave30  & recoJetMETPath & hltdijetave30}
         sequence JetMETDiJetAve60 =  {hltBegin & l1sdijetave60  & predijetave60  & recoJetMETPath & hltdijetave60}
         sequence JetMETDiJetAve110 = {hltBegin & l1sdijetave110 & predijetave110 & recoJetMETPath & hltdijetave110}
         sequence JetMETDiJetAve150 = {hltBegin & l1sdijetave150 & predijetave150 & recoJetMETPath & hltdijetave150}
