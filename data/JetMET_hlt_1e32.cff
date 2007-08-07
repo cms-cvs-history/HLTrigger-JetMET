@@ -117,6 +117,12 @@
         module  hlt1MET30 = hlt1CaloMET from "HLTrigger/HLTfilters/data/hlt1CaloMET.cfi"
         replace hlt1MET30.MinPt = 30.0
 
+        module  hlt1MET35 = hlt1CaloMET from "HLTrigger/HLTfilters/data/hlt1CaloMET.cfi"
+        replace hlt1MET35.MinPt = 35.0
+
+        module  hlt1MET40 = hlt1CaloMET from "HLTrigger/HLTfilters/data/hlt1CaloMET.cfi"
+        replace hlt1MET40.MinPt = 40.0
+
         module  hlt1MET60 = hlt1CaloMET from "HLTrigger/HLTfilters/data/hlt1CaloMET.cfi"
         replace hlt1MET60.MinPt = 60.0
 
@@ -273,16 +279,16 @@
         sequence JetMET1jetPE1  = {hltBegin & l1s1jetPE1 & pre1jetPE1 & recoJetMETPath & hlt1jet150}
         sequence JetMET1jetPE3  = {hltBegin & l1s1jetPE3 & pre1jetPE3 & recoJetMETPath & hlt1jet110}
         sequence JetMET1jetPE5  = {hltBegin & l1s1jetPE5 & pre1jetPE5 & recoJetMETPath & hlt1jet60}
-        sequence JetMET1jetPE7  = {hltBegin & l1s1jetPE5 & pre1jetPE7 & recoJetMETPath & hlt1jet30}
+        sequence JetMET1jetPE7  = {hltBegin & l1s1jetPE7 & pre1jetPE7 & recoJetMETPath & hlt1jet30}
 
         sequence JetMET2jet = {hltBegin & l1s2jet & pre2jet & recoJetMETPath & hlt2jet150}
         sequence JetMET3jet = {hltBegin & l1s3jet & pre3jet & recoJetMETPath & hlt3jet85}
         sequence JetMET4jet = {hltBegin & l1s4jet & pre4jet & recoJetMETPath & hlt4jet60 }
 
         sequence JetMET1MET     = {hltBegin & l1s1MET & pre1MET & recoJetMETPath & hlt1MET65}
-        sequence JetMET1METPre1 = {hltBegin & l1s1METPre1 & pre1METPre1 & recoJetMETPath & hlt1MET30}
-        sequence JetMET1METPre2 = {hltBegin & l1s1METPre2 & pre1METPre2 & recoJetMETPath & hlt1MET20}
-        sequence JetMET1METPre3 = {hltBegin & l1s1METPre3 & pre1METPre3 & recoJetMETPath & hlt1MET15}
+        sequence JetMET1METPre1 = {hltBegin & l1s1METPre1 & pre1METPre1 & recoJetMETPath & hlt1MET35}
+        sequence JetMET1METPre2 = {hltBegin & l1s1METPre2 & pre1METPre2 & recoJetMETPath & hlt1MET30}
+        sequence JetMET1METPre3 = {hltBegin & l1s1METPre3 & pre1METPre3 & recoJetMETPath & hlt1MET20}
 
 
         sequence JetMET2jetAco  = {hltBegin & l1s2jetAco  & pre2jetAco & recoJetMETPath & hlt2jet125 & hlt2jetAco}
