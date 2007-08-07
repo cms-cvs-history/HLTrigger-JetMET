@@ -19,7 +19,7 @@ path HLT4jet1MET = {JetMET4jet1MET}
 // HT triggers and SumET
 // path HLT1HT     = {JetMET1HT}
 path HLT1MET1HT = {JetMET1MET1HT}
-path CandHLT1MET1HT = {JetMET1SumET}
+path CandHLT1SumET = {JetMET1SumET}
 
 // jet triggers prescaled already at L1:
 path HLT1jetPE1 = {JetMET1jetPE1}
@@ -29,8 +29,8 @@ path CandHLT1jetPE7 = {JetMET1jetPE7}
 
 // MET triggers prescaled already at L1:
 path CandHLT1METPre1        = {JetMET1METPre1}
-//path CandHLT1METPre2        = {JetMET1METPre2}
-//path CandHLT1METPre3        = {JetMET1METPre3}
+path CandHLT1METPre2        = {JetMET1METPre2}
+path CandHLT1METPre3        = {JetMET1METPre3}
 
 // Dijet balance triggers
 path CandHLT2jetAve30  = {JetMETDiJetAve30}
