@@ -61,13 +61,13 @@
         replace l1s1METPre1.L1GTReadoutRecord  = l1extraParticleMap
 
 	module  l1s1METPre2        = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1s1METPre2.L1Seeds = {"L1_ETM15"}
+	replace l1s1METPre2.L1Seeds = {"L1_MinBias_HTT10"}
         replace l1s1METPre2.L1ExtraCollections = l1extraParticles
         replace l1s1METPre2.L1ExtraParticleMap = l1extraParticleMap
         replace l1s1METPre2.L1GTReadoutRecord  = l1extraParticleMap
 
 	module  l1s1METPre3        = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1s1METPre3.L1Seeds = {"L1_ETM10"}
+	replace l1s1METPre3.L1Seeds = {"L1_MinBias_HTT10"}
         replace l1s1METPre3.L1ExtraCollections = l1extraParticles
         replace l1s1METPre3.L1ExtraParticleMap = l1extraParticleMap
         replace l1s1METPre3.L1GTReadoutRecord  = l1extraParticleMap
