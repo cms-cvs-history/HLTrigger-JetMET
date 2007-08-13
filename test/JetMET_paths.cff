@@ -33,6 +33,7 @@ path CandHLT1METPre2        = {JetMET1METPre2}
 path CandHLT1METPre3        = {JetMET1METPre3}
 
 // Dijet balance triggers
+path CandHLT2jetAve30  = {JetMETDiJetAve30}
 path CandHLT2jetAve60  = {JetMETDiJetAve60}
 path CandHLT2jetAve110 = {JetMETDiJetAve110}
 path CandHLT2jetAve150 = {JetMETDiJetAve150}
