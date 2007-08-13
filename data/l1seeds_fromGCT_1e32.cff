@@ -168,26 +168,32 @@
         replace l1RapGap.L1ExtraParticleMap = l1extraParticleMap
         replace l1RapGap.L1GTReadoutRecord  = l1extraParticleMap
 
+        module  l1sdijetave30        = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
+        replace l1sdijetave30.L1Seeds = {"L1_SingleJet15"}
+        replace l1sdijetave30.L1ExtraCollections = l1extraParticles
+        replace l1sdijetave30.L1ExtraParticleMap = l1extraParticleMap
+        replace l1sdijetave30.L1GTReadoutRecord  = l1extraParticleMap
+
         module  l1sdijetave60        = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-        replace l1sdijetave60.L1Seeds = {"L1_HTT100"}
+        replace l1sdijetave60.L1Seeds = {"L1_SingleJet30"}
         replace l1sdijetave60.L1ExtraCollections = l1extraParticles
         replace l1sdijetave60.L1ExtraParticleMap = l1extraParticleMap
         replace l1sdijetave60.L1GTReadoutRecord  = l1extraParticleMap
 
         module  l1sdijetave110        = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-        replace l1sdijetave110.L1Seeds = {"L1_HTT200"}
+        replace l1sdijetave110.L1Seeds = {"L1_SingleJet70"}
         replace l1sdijetave110.L1ExtraCollections = l1extraParticles
         replace l1sdijetave110.L1ExtraParticleMap = l1extraParticleMap
         replace l1sdijetave110.L1GTReadoutRecord  = l1extraParticleMap
 
         module  l1sdijetave150        = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-        replace l1sdijetave150.L1Seeds = {"L1_HTT250"}
+        replace l1sdijetave150.L1Seeds = {"L1_SingleJet100"}
         replace l1sdijetave150.L1ExtraCollections = l1extraParticles
         replace l1sdijetave150.L1ExtraParticleMap = l1extraParticleMap
         replace l1sdijetave150.L1GTReadoutRecord  = l1extraParticleMap
 
         module  l1sdijetave200        = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-        replace l1sdijetave200.L1Seeds = {"L1_HTT300"}
+        replace l1sdijetave200.L1Seeds = {"L1_SingleJet150"}
         replace l1sdijetave200.L1ExtraCollections = l1extraParticles
         replace l1sdijetave200.L1ExtraParticleMap = l1extraParticleMap
         replace l1sdijetave200.L1GTReadoutRecord  = l1extraParticleMap
