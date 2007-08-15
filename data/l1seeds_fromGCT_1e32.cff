@@ -163,7 +163,7 @@
         replace l1s1MET1HT.L1GTReadoutRecord  = l1extraParticleMap
 
 	module  l1RapGap = hltLevel1Seed from "HLTrigger/HLTfilters/data/hltLevel1Seed.cfi"
-	replace l1RapGap.L1Seeds = {"L1_IsoEG15_Jet20_ForJet10"}
+	replace l1RapGap.L1Seeds = {"L1_IsoEG10_Jet20_ForJet10"}
         replace l1RapGap.L1ExtraCollections = l1extraParticles
         replace l1RapGap.L1ExtraParticleMap = l1extraParticleMap
         replace l1RapGap.L1GTReadoutRecord  = l1extraParticleMap
