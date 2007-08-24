@@ -70,7 +70,7 @@
 // Triple jet triggers
 
         module  hlt3jet60 = hlt1CaloJet from "HLTrigger/HLTfilters/data/hlt1CaloJet.cfi"
-        replace hlt3jet60.MinPt = 75.0
+        replace hlt3jet60.MinPt = 60.0
         replace hlt3jet60.MinN  = 3
 
         module  hlt3jet75 = hlt1CaloJet from "HLTrigger/HLTfilters/data/hlt1CaloJet.cfi"
@@ -273,7 +273,7 @@
         sequence JetMET1jetPE1  = {hltBegin & l1s1jetPE1 & pre1jetPE1 & recoJetMETPath & hlt1jet150}
         sequence JetMET1jetPE3  = {hltBegin & l1s1jetPE3 & pre1jetPE3 & recoJetMETPath & hlt1jet110}
         sequence JetMET1jetPE5  = {hltBegin & l1s1jetPE5 & pre1jetPE5 & recoJetMETPath & hlt1jet60}
-        sequence JetMET1jetPE7  = {hltBegin & l1s1jetPE5 & pre1jetPE7 & recoJetMETPath & hlt1jet30}
+        sequence JetMET1jetPE7  = {hltBegin & l1s1jetPE7 & pre1jetPE7 & recoJetMETPath & hlt1jet30}
 
         sequence JetMET2jet = {hltBegin & l1s2jet & pre2jet & recoJetMETPath & hlt2jet150}
         sequence JetMET3jet = {hltBegin & l1s3jet & pre3jet & recoJetMETPath & hlt3jet85}
