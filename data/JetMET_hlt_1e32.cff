@@ -70,7 +70,7 @@
 // Triple jet triggers
 
         module  hlt3jet60 = hlt1CaloJet from "HLTrigger/HLTfilters/data/hlt1CaloJet.cfi"
-        replace hlt3jet60.MinPt = 75.0
+        replace hlt3jet60.MinPt = 60.0
         replace hlt3jet60.MinN  = 3
 
         module  hlt3jet75 = hlt1CaloJet from "HLTrigger/HLTfilters/data/hlt1CaloJet.cfi"
