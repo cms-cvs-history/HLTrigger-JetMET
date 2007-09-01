@@ -66,6 +66,7 @@
         module  hlt2jetvbf = hltJetVBFFilter from "HLTrigger/JetMET/data/hltJetVBFFilter.cfi"
         replace hlt2jetvbf.inputTag = MCJetCorJetIcone5
         replace hlt2jetvbf.minEt = 40.0
+        replace hlt2jetvbf.minDeltaEta = 2.5
 
 // Triple jet triggers
 
