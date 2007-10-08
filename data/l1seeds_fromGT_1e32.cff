@@ -82,7 +82,7 @@
 	replace l1s1MET1HT.L1SeedsLogicalExpression = "L1_HTT300"
 
 	module  l1RapGap = hltLevel1GTSeed from "HLTrigger/HLTfilters/data/hltLevel1GTSeed.cfi"
-	replace l1RapGap.L1SeedsLogicalExpression = "L1_IsoEG10_Jet20_ForJet10"
+	replace l1RapGap.L1SeedsLogicalExpression = "L1_IsoEG10_Jet15_ForJet10"
 
         module  l1sdijetave30        = hltLevel1GTSeed from "HLTrigger/HLTfilters/data/hltLevel1GTSeed.cfi"
         replace l1sdijetave30.L1SeedsLogicalExpression = "L1_SingleJet15"
