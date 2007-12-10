@@ -203,7 +203,7 @@
 
 // Double object filters (for acoplanarity cuts between 2 objects)
 
-	module hlt2jetAco = HLTDoublet {
+	module hlt2jetAco = HLT2JetJet {
 		InputTag inputTag1 = hlt2jet125
 		InputTag inputTag2 = hlt2jet125
 		double MinDphi   = 0.0
@@ -215,7 +215,7 @@
                 int32  MinN  = 1
 	}
 
-	module hlt1jet1METAco = HLTDoublet {
+	module hlt1jet1METAco = HLT2JetMET {
 		InputTag inputTag1 = hlt1jet100
 		InputTag inputTag2 = hlt1MET60
 		double MinDphi   = 0.0
