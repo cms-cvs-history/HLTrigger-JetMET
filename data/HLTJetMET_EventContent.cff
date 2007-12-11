@@ -1,0 +1,24 @@
+# Full Event content
+block HLTJetMETFEVT = {
+    untracked vstring outputCommands = { 
+	"keep *_caloTowers_*_*",
+	"keep *_towerMaker_*_*",
+	"keep *_MCJetCorJetIcone5_*_*",
+	"keep *_met_*_*",
+	"keep *_htMet_*_*",
+	"keep *_htMetIC5_*_*"
+    }
+}
+# RECO content
+block HLTJetMETRECO = {
+    untracked vstring outputCommands = { 
+	"keep *_MCJetCorJetIcone5_*_*",
+	"keep *_met_*_*",
+	"keep *_htMet_*_*",
+	"keep *_htMetIC5_*_*"
+    }
+}
+# AOD content
+block HLTJetMETAOD = {
+    untracked vstring outputCommands = { }
+}
