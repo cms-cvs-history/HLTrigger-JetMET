@@ -1,9 +1,8 @@
 # Full Event content
 block HLTJetMETFEVT = {
     untracked vstring outputCommands = { 
-	"keep *_caloTowers_*_*",
-	"keep *_towerMaker_*_*",
 	"keep *_MCJetCorJetIcone5_*_*",
+	"keep *_iterativeCone5CaloJets_*_*",
 	"keep *_met_*_*",
 	"keep *_htMet_*_*",
 	"keep *_htMetIC5_*_*"
@@ -13,6 +12,7 @@ block HLTJetMETFEVT = {
 block HLTJetMETRECO = {
     untracked vstring outputCommands = { 
 	"keep *_MCJetCorJetIcone5_*_*",
+	"keep *_iterativeCone5CaloJets_*_*",
 	"keep *_met_*_*",
 	"keep *_htMet_*_*",
 	"keep *_htMetIC5_*_*"
@@ -21,4 +21,46 @@ block HLTJetMETRECO = {
 # AOD content
 block HLTJetMETAOD = {
     untracked vstring outputCommands = { }
+    VInputTag triggerCollections = {
+        MCJetCorJetIcone5,
+	iterativeCone5CaloJets,
+	met,
+        htMet,
+	htMetIC5
+    }
+    VInputTag triggerFilters = {
+	hlt1jet200,
+	hlt1jet150,
+	hlt1jet110,
+	hlt1jet60,
+	hlt1jet30,
+	hlt2jet150,
+	hlt3jet85,
+	hlt4jet60,
+	hlt1MET65,
+	hlt1MET35,
+	hlt1MET30,
+	hlt1MET20,
+	hlt2jetAco,
+	hlt1jet180,
+	hlt2jet125,
+	hlt3jet60,
+	hlt4jet35,
+	hlt1jet1METAco,
+	hlt2jetvbf,
+	hltnv,
+	hltPhi2metAco,
+	hltPhiJet1metAco,
+	hltPhiJet2metAco,
+	hltPhiJet1Jet2Aco,
+	hlt1SumET120,
+	hlt1HT400,
+	hlt1HT350,
+	hltRapGap,
+	hltdijetave110,
+	hltdijetave150,
+	hltdijetave200,
+	hltdijetave30,
+	hltdijetave60
+    }
 }
