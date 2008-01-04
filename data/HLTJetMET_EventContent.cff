@@ -1,8 +1,8 @@
 # Full Event content
 block HLTJetMETFEVT = {
     untracked vstring outputCommands = { 
-	"keep *_MCJetCorJetIcone5_*_*",
-	"keep *_iterativeCone5CaloJets_*_*",
+	"keep *_MCJetCorJetIcone5*_*_*",
+	"keep *_iterativeCone5CaloJets*_*_*",
 	"keep *_met_*_*",
 	"keep *_htMet_*_*",
 	"keep *_htMetIC5_*_*"
@@ -11,8 +11,8 @@ block HLTJetMETFEVT = {
 # RECO content
 block HLTJetMETRECO = {
     untracked vstring outputCommands = { 
-	"keep *_MCJetCorJetIcone5_*_*",
-	"keep *_iterativeCone5CaloJets_*_*",
+	"keep *_MCJetCorJetIcone5*_*_*",
+	"keep *_iterativeCone5CaloJets*_*_*",
 	"keep *_met_*_*",
 	"keep *_htMet_*_*",
 	"keep *_htMetIC5_*_*"
@@ -24,6 +24,8 @@ block HLTJetMETAOD = {
     VInputTag triggerCollections = {
         MCJetCorJetIcone5,
 	iterativeCone5CaloJets,
+	MCJetCorJetIcone5Regional,
+	iterativeCone5CaloJetsRegional,
 	met,
         htMet,
 	htMetIC5
