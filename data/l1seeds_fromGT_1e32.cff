@@ -22,13 +22,13 @@
 	replace l1s3jet.L1SeedsLogicalExpression = "L1_SingleJet150 OR L1_DoubleJet70 OR L1_TripleJet50"
 
 	module  l1s4jet        = hltLevel1GTSeed from "HLTrigger/HLTfilters/data/hltLevel1GTSeed.cfi"
-	replace l1s4jet.L1SeedsLogicalExpression = "L1_SingleJet150 OR L1_DoubleJet70 OR L1_TripleJet50 OR L1_QuadJet30"
+	replace l1s4jet.L1SeedsLogicalExpression = "L1_SingleJet150 OR L1_DoubleJet70 OR L1_TripleJet50 OR L1_QuadJet40"
 
 	module  l1s1MET        = hltLevel1GTSeed from "HLTrigger/HLTfilters/data/hltLevel1GTSeed.cfi"
 	replace l1s1MET.L1SeedsLogicalExpression = "L1_ETM40"
 
 	module  l1s1METPre1        = hltLevel1GTSeed from "HLTrigger/HLTfilters/data/hltLevel1GTSeed.cfi"
-	replace l1s1METPre1.L1SeedsLogicalExpression = "L1_ETM30"
+	replace l1s1METPre1.L1SeedsLogicalExpression = "L1_ETM40"
 
 	module  l1s1METPre2        = hltLevel1GTSeed from "HLTrigger/HLTfilters/data/hltLevel1GTSeed.cfi"
 	replace l1s1METPre2.L1SeedsLogicalExpression = "L1_ETM15"
@@ -61,7 +61,7 @@
         replace l1s4jet1MET.L1SeedsLogicalExpression = "L1_SingleJet150"
 
 	module  l1s2jetvbfMET    = hltLevel1GTSeed from "HLTrigger/HLTfilters/data/hltLevel1GTSeed.cfi"
-	replace l1s2jetvbfMET.L1SeedsLogicalExpression = "L1_ETM30"
+	replace l1s2jetvbfMET.L1SeedsLogicalExpression = "L1_ETM40"
 
 	module  l1snvMET    = hltLevel1GTSeed from "HLTrigger/HLTfilters/data/hltLevel1GTSeed.cfi"
         replace l1snvMET.L1SeedsLogicalExpression = "L1_SingleJet150"
