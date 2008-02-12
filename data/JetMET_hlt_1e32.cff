@@ -273,6 +273,7 @@
         module  predijetave60     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  predijetave110     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  predijetave150     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        replace predijetave150.prescaleFactor=10
         module  predijetave200     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
 
 // HLT JetMET trigger sequences
