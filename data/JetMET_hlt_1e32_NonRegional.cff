@@ -124,6 +124,9 @@
         module  hlt1MET40 = hlt1CaloMET from "HLTrigger/HLTfilters/data/hlt1CaloMET.cfi"
         replace hlt1MET40.MinPt = 40.0
 
+        module  hlt1MET55 = hlt1CaloMET from "HLTrigger/HLTfilters/data/hlt1CaloMET.cfi"
+        replace hlt1MET55.MinPt = 55.0
+
         module  hlt1MET60 = hlt1CaloMET from "HLTrigger/HLTfilters/data/hlt1CaloMET.cfi"
         replace hlt1MET60.MinPt = 60.0
 
@@ -243,6 +246,7 @@
         module  pre4jet        = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre1MET        = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre1METPre1    = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        replace pre1METPre1.prescaleFactor=100
         module  pre1METPre2    = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre1METPre3    = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre1HT         = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
@@ -263,7 +267,7 @@
         module  pre1MET1SumET  = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
 
         module  pre1jetPE1     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
-        //replace pre1jetPE1.prescaleFactor=10
+        replace pre1jetPE1.prescaleFactor=10
         module  pre1jetPE3     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre1jetPE5     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre1jetPE7     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
@@ -273,6 +277,7 @@
         module  predijetave60     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  predijetave110     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  predijetave150     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        replace predijetave150.prescaleFactor=10
         module  predijetave200     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
 
 // HLT JetMET trigger sequences
@@ -287,7 +292,7 @@
         sequence JetMET4jet = {hltBegin & l1s4jet & pre4jet & recoJetMETPath & hlt4jet60 }
 
         sequence JetMET1MET     = {hltBegin & l1s1MET & pre1MET & recoJetMETPath & hlt1MET65}
-        sequence JetMET1METPre1 = {hltBegin & l1s1METPre1 & pre1METPre1 & recoJetMETPath & hlt1MET35}
+        sequence JetMET1METPre1 = {hltBegin & l1s1METPre1 & pre1METPre1 & recoJetMETPath & hlt1MET55}
         sequence JetMET1METPre2 = {hltBegin & l1s1METPre2 & pre1METPre2 & recoJetMETPath & hlt1MET30}
         sequence JetMET1METPre3 = {hltBegin & l1s1METPre3 & pre1METPre3 & recoJetMETPath & hlt1MET20}
 

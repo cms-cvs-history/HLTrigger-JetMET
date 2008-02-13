@@ -40,7 +40,7 @@ block HLTJetMETAOD = {
 	hlt3jet85,
 	hlt4jet60,
 	hlt1MET65,
-	hlt1MET35,
+	hlt1MET55,
 	hlt1MET30,
 	hlt1MET20,
 	hlt2jetAco,
