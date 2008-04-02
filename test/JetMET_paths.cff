@@ -25,19 +25,19 @@ path CandHLT1SumET = {JetMET1SumET}
 path HLT1jetPE1 = {JetMET1jetPE1}
 path HLT1jetPE3 = {JetMET1jetPE3}
 path HLT1jetPE5 = {JetMET1jetPE5}
-path CandHLT1jetPE7 = {JetMET1jetPE7}
+path HLT1jetPE7 = {JetMET1jetPE7}
 
 // MET triggers prescaled already at L1:
-path CandHLT1METPre1        = {JetMET1METPre1}
-path CandHLT1METPre2        = {JetMET1METPre2}
-path CandHLT1METPre3        = {JetMET1METPre3}
+path HLT1METPre1        = {JetMET1METPre1}
+path HLT1METPre2        = {JetMET1METPre2}
+path HLT1METPre3        = {JetMET1METPre3}
 
 // Dijet balance triggers
-path CandHLT2jetAve30  = {JetMETDiJetAve30}
-path CandHLT2jetAve60  = {JetMETDiJetAve60}
-path CandHLT2jetAve110 = {JetMETDiJetAve110}
-path CandHLT2jetAve150 = {JetMETDiJetAve150}
-path CandHLT2jetAve200 = {JetMETDiJetAve200}
+path HLT2jetAve30  = {JetMETDiJetAve30}
+path HLT2jetAve60  = {JetMETDiJetAve60}
+path HLT2jetAve110 = {JetMETDiJetAve110}
+path HLT2jetAve150 = {JetMETDiJetAve150}
+path HLT2jetAve200 = {JetMETDiJetAve200}
 
 // vbf trigger
 path HLT2jetvbfMET = {JetMET2jetvbfMET}
@@ -45,9 +45,9 @@ path HLT2jetvbfMET = {JetMET2jetvbfMET}
 // SUSY triggers
 path HLTS2jet1METNV  = {JetMETNV}
 path HLTS2jet1METAco = {JetMETPhi2METaco}
-path CandHLTSjet1MET1Aco = {JetMETPhiJet1METaco}
-path CandHLTSjet2MET1Aco = {JetMETPhiJet2METaco}
-path CandHLTS2jetAco     = {JetMETPhiJet1Jet2aco}
+path HLTSjet1MET1Aco = {JetMETPhiJet1METaco}
+path HLTSjet2MET1Aco = {JetMETPhiJet2METaco}
+path HLTS2jetAco     = {JetMETPhiJet1Jet2aco}
 
 // Diffractive triggers
-path CandHLTJetMETRapidityGap = {JetMETRapGap}
+path HLTJetMETRapidityGap = {JetMETRapGap}
