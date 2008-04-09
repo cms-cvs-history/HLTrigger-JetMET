@@ -76,7 +76,7 @@
         module  hlt2jetgap = hlt2jetGapFilter from "HLTrigger/JetMET/data/hlt2jetGapFilter.cfi"
         replace hlt2jetgap.inputTag = MCJetCorJetIcone5
         replace hlt2jetgap.minEt = 90.0
-        replace hlt2jetgap.minEta = 0
+        replace hlt2jetgap.minEta = 1.9
 
 
 
