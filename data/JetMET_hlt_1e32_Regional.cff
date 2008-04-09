@@ -73,6 +73,13 @@
         replace hlt2jetvbf.minEt = 40.0
         replace hlt2jetvbf.minDeltaEta = 2.5
 
+        module  hlt2jetgap = hlt2jetGapFilter from "HLTrigger/JetMET/data/hlt2jetGapFilter.cfi"
+        replace hlt2jetgap.inputTag = MCJetCorJetIcone5
+        replace hlt2jetgap.minEt = 90.0
+        replace hlt2jetgap.minEta = 0
+
+
+
 // Triple jet triggers
 
         module  hlt3jet60 = hlt1CaloJet from "HLTrigger/HLTfilters/data/hlt1CaloJet.cfi"
@@ -248,6 +255,7 @@
 
         module  pre1jet        = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre2jet        = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
+        module  pre2jetgap     = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre3jet        = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre4jet        = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
         module  pre1MET        = hltPrescaler from "HLTrigger/HLTcore/data/hltPrescaler.cfi"
@@ -294,6 +302,8 @@
         sequence JetMET1jetPE7  = {hltBegin & l1s1jetPE7 & pre1jetPE7 & recoJetMETPath & hlt1jet30}
 
         sequence JetMET2jet = {hltBegin & l1s2jet & pre2jet & recoJetRegional & hlt2jet150}
+        sequence JetMET2jetgap = {hltBegin & l1s2jetgap & pre2jetgap & recoJetMETPath & hlt2jetgap}
+
         sequence JetMET3jet = {hltBegin & l1s3jet & pre3jet & recoJetRegional & hlt3jet85}
         sequence JetMET4jet = {hltBegin & l1s4jet & pre4jet & recoJetMETPath & hlt4jet60 }
 

@@ -18,6 +18,9 @@
 	module  l1s2jet        = hltLevel1GTSeed from "HLTrigger/HLTfilters/data/hltLevel1GTSeed.cfi"
 	replace l1s2jet.L1SeedsLogicalExpression = "L1_SingleJet150 OR L1_DoubleJet70"
 
+        module  l1s2jetgap     = hltLevel1GTSeed from "HLTrigger/HLTfilters/data/hltLevel1GTSeed.cfi"
+        replace l1s2jetgap.L1SeedsLogicalExpression = "L1_DoubleJet70"
+
 	module  l1s3jet        = hltLevel1GTSeed from "HLTrigger/HLTfilters/data/hltLevel1GTSeed.cfi"
 	replace l1s3jet.L1SeedsLogicalExpression = "L1_SingleJet150 OR L1_DoubleJet70 OR L1_TripleJet50"
 
