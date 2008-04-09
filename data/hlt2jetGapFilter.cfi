@@ -1,0 +1,5 @@
+module hlt2jetGapFilter = HLT2jetGapFilter {
+   InputTag inputTag = iterativeCone5CaloJets
+   double minEt = 90.0
+   double minEta = 1.9	   
+}
