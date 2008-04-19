@@ -60,6 +60,7 @@ block HLTJetMETAOD = {
 	hlt1HT400,
 	hlt1HT350,
 	hltRapGap,
+	hlt2jetgap,
 	hltdijetave110,
 	hltdijetave150,
 	hltdijetave200,
