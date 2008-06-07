@@ -1,2 +1,0 @@
-# include "HLTrigger/JetMET/data/JetMET_hlt_1e32_NonRegional.cff"
-include "HLTrigger/JetMET/data/JetMET_hlt_1e32_Regional.cff"
