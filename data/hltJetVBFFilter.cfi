@@ -1,5 +1,0 @@
-module hltJetVBFFilter = HLTJetVBFFilter {
-   InputTag inputTag = iterativeCone5CaloJets
-   double minEt = 40.0
-   double minDeltaEta = 4.2	   
-}
