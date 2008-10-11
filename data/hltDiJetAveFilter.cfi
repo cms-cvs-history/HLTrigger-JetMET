@@ -1,6 +1,0 @@
-module hltDiJetAveFilter = HLTDiJetAveFilter {
-   InputTag inputJetTag = iterativeCone5CaloJets
-   double minEtAve = 60.
-   double minEtJet3 = 3000.
-   double minDphi = 0.	   
-}

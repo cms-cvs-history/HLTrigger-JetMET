@@ -1,9 +1,0 @@
-module hltPhiJet1Jet2Filter = HLTAcoFilter {
-   InputTag inputJetTag = iterativeCone5CaloJets
-   InputTag inputMETTag =hlt1MET70
-   double minDeltaPhi = 0.
-   double maxDeltaPhi = 2.7646
-   double minEtJet1 = 40.	   
-   double minEtJet2 = 40.
-   string Acoplanar = "Jet1Jet2"
-}
