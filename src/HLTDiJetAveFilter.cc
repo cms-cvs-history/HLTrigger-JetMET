@@ -48,7 +48,7 @@ HLTDiJetAveFilter::filter(edm::Event& iEvent, const edm::EventSetup& iSetup)
   // The filter object
   auto_ptr<trigger::TriggerFilterObjectWithRefs> 
     filterobject (new trigger::TriggerFilterObjectWithRefs(path(),module()));
-  if (saveTag_) filterobject->addCollectionTag(inputJetTag_);
+  if (saveTag_) filterobject->addCollectionTag(inputJetTag_, static_cast<const HLTFilter &> (*this));
 
   Handle<CaloJetCollection> recocalojets;
   iEvent.getByLabel(inputJetTag_,recocalojets);

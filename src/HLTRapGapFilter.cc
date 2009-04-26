@@ -1,6 +1,6 @@
 /** \class HLTRapGapFilter
  *
- * $Id: HLTRapGapFilter.cc,v 1.6 2007/12/09 23:22:11 apana Exp $
+ * $Id: HLTRapGapFilter.cc,v 1.7 2008/06/07 19:46:08 apana Exp $
  *
  *  \author Monica Vazquez Acosta (CERN)
  *
@@ -48,7 +48,7 @@ HLTRapGapFilter::filter(edm::Event& iEvent, const edm::EventSetup& iSetup)
   // The filter object
   std::auto_ptr<trigger::TriggerFilterObjectWithRefs> 
     filterobject (new trigger::TriggerFilterObjectWithRefs(path(),module()));
-  if (saveTag_) filterobject->addCollectionTag(inputTag_);
+  if (saveTag_) filterobject->addCollectionTag(inputTag_, static_cast<const HLTFilter &> (*this));
 
   edm::Handle<CaloJetCollection> recocalojets;
   iEvent.getByLabel(inputTag_,recocalojets);

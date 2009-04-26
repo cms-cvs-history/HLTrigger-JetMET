@@ -53,8 +53,8 @@ HLTPhi2METFilter::filter(edm::Event& iEvent, const edm::EventSetup& iSetup)
   auto_ptr<trigger::TriggerFilterObjectWithRefs> 
     filterobject (new trigger::TriggerFilterObjectWithRefs(path(),module()));
   if (saveTags_) {
-    filterobject->addCollectionTag(inputJetTag_);
-    filterobject->addCollectionTag(inputMETTag_);
+    filterobject->addCollectionTag(inputJetTag_, static_cast<const HLTFilter &> (*this));
+    filterobject->addCollectionTag(inputMETTag_, static_cast<const HLTFilter &> (*this));
   }
 
   Handle<CaloJetCollection> recocalojets;

@@ -47,7 +47,7 @@ HLTMhtHtFilter::filter(edm::Event& iEvent, const edm::EventSetup& iSetup)
   using namespace trigger;
   // The filter object
   auto_ptr<trigger::TriggerFilterObjectWithRefs> filterobject (new trigger::TriggerFilterObjectWithRefs(path(),module()));
-  if (saveTag_) filterobject->addCollectionTag(inputJetTag_);
+  if (saveTag_) filterobject->addCollectionTag(inputJetTag_, static_cast<const HLTFilter &> (*this));
 
   CaloJetRef ref;
   // Get the Candidates
